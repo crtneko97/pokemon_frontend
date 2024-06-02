@@ -1,0 +1,38 @@
+/* Pokemon.css */
+
+.Pokemon-container {
+    background-image: linear-gradient(to bottom, #87CEEB, #FFFFFF); /* Blue sky gradient with white clouds */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .Pokemon-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .Pokemon-info {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .Pokemon-image {
+    max-width: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .Pokemon-ability {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .Pokemon-ability li {
+    margin-bottom: 5px;
+  }
+  

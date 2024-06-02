@@ -1,7 +1,9 @@
-// src/App.js
+// App.js
+
 import React, { useState } from 'react';
 import './App.css';
-import Pokemon from './components/Pokemon';
+import Pokemon from './components/Pokemon/Pokemon';
+import PokemonList from './components/Pokemon/PokemonList';
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,17 +18,19 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Pokémon Search</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="Pokemon-search-form">
           <input 
             type="text" 
             value={searchTerm} 
             onChange={(e) => setSearchTerm(e.target.value)} 
             placeholder="Enter Pokémon name" 
+            className="Pokemon-search-input"
           />
-          <button type="submit">Search</button>
+          <button type="submit" className="Pokemon-search-button">Search</button>
         </form>
         {pokemonName && <Pokemon name={pokemonName} />}
       </header>
+      <PokemonList />
     </div>
   );
 }
