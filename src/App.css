@@ -1,6 +1,10 @@
-/* App.css */
-
 /* Center the content vertically and horizontally */
+.body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
 .App {
   display: flex;
   flex-direction: column;
@@ -15,7 +19,25 @@
   text-align: center;
 }
 
+/* Container for search form and Pokémon list */
+.App-content {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: flex-start; /* Align items at the start of the container */
+  justify-content: center; /* Center items horizontally */
+  width: 80%; /* Make the container narrower */
+  margin: 0 auto; /* Center the container within the App */
+  padding: 20px;
+}
+
 /* Style the Pokémon search form */
+.Pokemon-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px; /* Add some right margin for spacing */
+}
+
 .Pokemon-search-form {
   margin-bottom: 20px; /* Add some bottom margin for spacing */
 }

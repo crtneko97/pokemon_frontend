@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useState } from 'react';
 import './App.css';
 import Pokemon from './components/Pokemon/Pokemon';
@@ -15,23 +13,29 @@ function App() {
   };
 
   return (
+    <>
     <div className="App">
       <header className="App-header">
         <h1>Pokémon Search</h1>
-        <form onSubmit={handleSubmit} className="Pokemon-search-form">
-          <input 
-            type="text" 
-            value={searchTerm} 
-            onChange={(e) => setSearchTerm(e.target.value)} 
-            placeholder="Enter Pokémon name" 
-            className="Pokemon-search-input"
-          />
-          <button type="submit" className="Pokemon-search-button">Search</button>
-        </form>
-        {pokemonName && <Pokemon name={pokemonName} />}
       </header>
-      <PokemonList />
+      <div className="App-content">
+        <div className="Pokemon-search">
+          <form onSubmit={handleSubmit} className="Pokemon-search-form">
+            <input 
+              type="text" 
+              value={searchTerm} 
+              onChange={(e) => setSearchTerm(e.target.value)} 
+              placeholder="Enter Pokémon name" 
+              className="Pokemon-search-input"
+            />
+            <button type="submit" className="Pokemon-search-button">Search</button>
+          </form>
+          {pokemonName && <Pokemon name={pokemonName} />}
+        </div>
+      </div>
     </div>
+      <PokemonList />
+    </>
   );
 }
 

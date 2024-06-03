@@ -24,7 +24,7 @@ function Pokemon({ name }) {
             <h2>Abilities</h2>
             <ul className="Pokemon-ability">
                 {pokemon.abilities.map((ability, index) => (
-                    <li key={index} className="Pokemon-info">{ability.ability.name}</li>
+                    <li key={index} className="Pokemon-i    nfo">{ability.ability.name}</li>
                 ))}
             </ul>
         </div>

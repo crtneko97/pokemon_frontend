@@ -1,31 +1,68 @@
-
-/* Style the Pokemon list container */
 .PokemonList-container {
-  max-width: 600px; /* Limit the width of the container */
-  margin: 0 auto; /* Center the container horizontally */
+  margin: 20px;
 }
 
-/* Style the Pokemon list header */
 .PokemonList-header {
-  font-size: 24px; /* Increase font size */
-  font-weight: bold; /* Add bold font weight */
+  text-align: center;
 }
 
-/* Style the Pokemon list */
 .PokemonList {
-  list-style-type: none; /* Remove default list styles */
-  padding: 0; /* Remove default padding */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
 }
 
-/* Style the Pokemon list item */
 .PokemonList-item {
-  margin-bottom: 10px; /* Add some space between list items */
-  padding: 10px; /* Add padding */
-  background-color: #f0f0f0; /* Light gray background color */
-  border-radius: 5px; /* Add border radius */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 400px; /* Ensure all cards have the same height */
 }
 
-/* Style the Pokemon name */
-.PokemonList-name {
-  font-size: 18px; /* Decrease font size */
+.PokemonList-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Pokemon-name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Pokemon-info {
+  margin: 10px 0;
+}
+
+.Pokemon-image {
+  width: 100px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.Pokemon-ability {
+  list-style-type: none;
+  padding: 0;
+}
+
+.Pokemon-ability li {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.Pokemon-container {
+  background-image: linear-gradient(to bottom, #87CEEB, #FFFFFF); /* Blue sky gradient with white clouds */
+  background-size: cover;
+  padding: 20px;
+  border-radius: 10px;
 }
